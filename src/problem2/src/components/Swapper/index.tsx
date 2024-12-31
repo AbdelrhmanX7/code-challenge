@@ -4,12 +4,12 @@ import { MdSwapHoriz } from "react-icons/md";
 import { useGetCryptoCurrencyPrices } from "@/services";
 import { CurrencyInput } from "./CryptoCurrencyInput";
 import { useCurrencySwapper } from "@/hooks";
-import { useToast } from "@/hooks/use-toast";
 import { useLocalStorage } from "usehooks-ts";
 import { TransactionsType } from "../transactions/columns";
 import { createTransaction } from "@/utils/create-transaction";
 import ExchangeRateDisplay from "./ExchangeRateDisplay";
 import TableSwitcher from "./TableSwitcher";
+import { useToast } from "@/hooks/use-toast";
 
 export const SwapperContainer = () => {
   const { data, isLoading } = useGetCryptoCurrencyPrices();

@@ -1,9 +1,8 @@
-import { cn } from "@/lib/utils";
 import { CryptoCurrencyPrice } from "@/services";
 import { getCryptoCurrencySvg } from "@/utils/crypto-currency-svgs";
 import { currencyFormatter } from "@/utils/currency-formatter";
 import { ColumnDef } from "@tanstack/react-table";
-import { MdCheck, MdClose } from "react-icons/md";
+import Image from "../image-with-fallback";
 
 export const columns: ColumnDef<CryptoCurrencyPrice>[] = [
   {
@@ -21,7 +20,7 @@ export const columns: ColumnDef<CryptoCurrencyPrice>[] = [
 
       return (
         <div className="flex items-center gap-2">
-          <img
+          <Image
             src={getCryptoCurrencySvg(currency)}
             width={30}
             height={30}
